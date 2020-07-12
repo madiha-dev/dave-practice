@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Study from './Study';
 import './index.css';
 
 /*What makes a fun, is a component??
@@ -7,10 +8,10 @@ import './index.css';
 it gets JSX, and renders the equivalent HTML o the DOM
 */
 
-function Hi(){
+function Hi(props){
     return (
     <div>
-        <p>HI! this is <strong>madiha</strong></p>
+        <p>HI! this is <strong>{props.name}.</strong></p>
         <h4>Learning React</h4>
         <ul>
             <li>Project 1</li>
@@ -27,4 +28,7 @@ function Hi(){
 - insert HTML elements with id "#root" into
      document.querySelector("#root")
 */
-ReactDOM.render(<Hi/>, document.querySelector('#root'));
+ReactDOM.render(
+[<Hi name="madiha"/>, 
+<Study name='React Practice'/>], 
+document.querySelector('#root'));
