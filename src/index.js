@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 
 /*What makes a fun, is a component??
 - fun has JSX syntax, when react invoke the fun,
@@ -9,7 +10,13 @@ it gets JSX, and renders the equivalent HTML o the DOM
 function Hi(){
     return (
     <div>
-        <p>HI! thiss is <strong>madiha</strong></p>
+        <p>HI! this is <strong>madiha</strong></p>
+        <h4>Learning React</h4>
+        <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+        </ul>
     </div>
     );
 }
