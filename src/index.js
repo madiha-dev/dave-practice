@@ -14,4 +14,10 @@ function Hi(){
     );
 }
 
+/*Rendering
+- call the fun e.g. here is "Hi"
+- gets JSX
+- insert HTML elements with id "#root" into
+     document.querySelector("#root")
+*/
 ReactDOM.render(<Hi/>, document.querySelector('#root'));
