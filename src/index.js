@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Study from './Study';
+import Gate from './Gate';
 import './index.css';
 
 /*What makes a fun, is a component??
@@ -30,9 +31,15 @@ function Hi(props){
      document.querySelector("#root")
 */
 ReactDOM.render(
-[<Hi name="madiha"/>, 
+[
+<Hi 
+    name="madiha"/>, 
 <Study 
-name='React Practice'
-url='/images/PK.jpeg'
-/>], 
+    name='React Practice'
+    url='/images/PK.jpeg'/>,
+<Gate
+    isOpen='true'/>,
+    <Gate
+    isOpen='false'/>
+], 
 document.querySelector('#root'));
