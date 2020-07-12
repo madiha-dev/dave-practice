@@ -5,6 +5,8 @@ function course(params) {
         <div>
             <h1>"{params.name}"</h1>
             <p>This is paragrapg of 2nd component</p>
+
+            <img src={params.url} alt='Pakistan'/>
         </div>
     );
 }

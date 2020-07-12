@@ -14,10 +14,11 @@ function Hi(props){
         <p>HI! this is <strong>{props.name}.</strong></p>
         <h4>Learning React</h4>
         <ul>
-            <li>Project 1</li>
+            <li>Project 1n</li>
             <li>Project 2</li>
             <li>Project 3</li>
         </ul>
+        
     </div>
     );
 }
@@ -30,5 +31,8 @@ function Hi(props){
 */
 ReactDOM.render(
 [<Hi name="madiha"/>, 
-<Study name='React Practice'/>], 
+<Study 
+name='React Practice'
+url='/images/PK.jpeg'
+/>], 
 document.querySelector('#root'));
