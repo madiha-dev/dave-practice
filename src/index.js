@@ -1,7 +1,7 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
 // import Study from './Study';
-// import Gate from './Gate';
+ import Gate from './Gate';
 // import './index.css';
 
 // /*What makes a fun, is a component??
@@ -54,7 +54,13 @@ function Room() {
     );
 }
 
-ReactDOM.render(<Room/>, document.getElementById('root'));
+ReactDOM.render([
+    <Room/>,
+    <Gate
+     isOpen='true'/>,
+     <Gate
+     isOpen='false'/>
+], document.getElementById('root'));
 
 /*document.getElementById with root
  same like 
