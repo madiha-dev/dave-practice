@@ -1,67 +1,34 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import Study from './Study';
- import Gate from './Gate';
-// import './index.css';
-
-// /*What makes a fun, is a component??
-// - fun has JSX syntax, when react invoke the fun,
-// it gets JSX, and renders the equivalent HTML o the DOM
-// */
-
-// function Hi(props){
-//     return (
-//     <div>
-//         <p>HI! this is <strong>{props.name}.</strong></p>
-//         <h4>Learning React</h4>
-//         <ul>
-//             <li>Project 1n</li>
-//             <li>Project 2</li>
-//             <li>Project 3</li>
-//         </ul>
-        
-//     </div>
-//     );
-// }
-
-// /*Rendering
-// - call the fun e.g. here is "Hi"
-// - gets JSX
-// - insert HTML elements with id "#root" into
-//      document.querySelector("#root")
-// */
-// ReactDOM.render(
-// [
-// <Hi 
-//     name="madiha"/>, 
-// <Study 
-//     name='React Practice'
-//     url='/images/PK.jpeg'/>,
-// <Gate
-//     isOpen='true'/>,
-//     <Gate
-//     isOpen='false'/>
-// ], 
-// document.querySelector('#root'));
-
-
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
+import Temperature from './Temperature';
+import './index.css';
 
 function Room() {
+    const [isLit, setLit] = useState(true);  
+    let [defaultTemp, currentTemp] = useState(72);
+    const brightness = isLit ? 'Lit' : 'Dark'; 
+    /* isLit = sate value
+       setLit = fun to change the state */ 
     return (
-        <div className='room'>The room is lit</div>
+        <div className={`room ${brightness}`}>
+            The room is {isLit ? 'Lit' : 'Dark'}<hr/>
+            {/* <button onClick={() => setLit(!isLit)}>
+                flip
+            </button> */}
+            <hr/>
+            <button onClick={() => (setLit(true), currentTemp(++defaultTemp))}>ON</button>
+            <button onClick={() => (setLit(false), currentTemp(--defaultTemp))}>OFF</button>
+            <br/><br/>
+            <Temperature count={defaultTemp}/>
+            
+        </div>
     );
 }
 
-ReactDOM.render([
-    <Room/>,
-    <Gate
-     isOpen='true'/>,
-     <Gate
-     isOpen='false'/>
-], document.getElementById('root'));
-
+ReactDOM.render(
+    <Room/>, 
+    document.querySelector('#root'));
+    
 /*document.getElementById with root
  same like 
  document.querySelector with #root
